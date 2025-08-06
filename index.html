@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p id="msg">🍨 Waiting...</p>
+
+        <script>
+            function getIcecream() {
+                return new Promise(resolve => {
+                    setTimeout(() => resolve("🍨 Ice Cream is ready!"), 5000); });
+                }
+                 async function showIceCeam() {
+                    let msg = await getIcecream();
+                    document.getElementById("msg").innerHTML = msg;
+                 }
+                 showIceCeam();
+
+            
+        </script>
+    </body>
+</html>
